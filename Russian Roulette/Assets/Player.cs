@@ -31,6 +31,7 @@ public class Player : MonoBehaviour {
 	//Generate a number between 1 and 6
 	public int SpinBarrel ()
 	{
+		source.PlayOneShot (spin, 2);
 		return Random.Range (1,SPIN);
 	}
 
@@ -40,6 +41,7 @@ public class Player : MonoBehaviour {
 		switch (bullet) {
 			//yes, the bullet fires and kills the player currently holding the gun
 		case true:{
+				source.PlayOneShot (shot, 1);
 			print ("The Gun has fired and killed " + players [currentPlayer]);
 			break;
 			}
@@ -47,7 +49,7 @@ public class Player : MonoBehaviour {
 		case false:
 			{
 			}
-			source.PlayOneShot (click,1);
+			source.PlayOneShot (click, 1);
 			print (players [currentPlayer] + " has pulled the trigger and nothing happened");
 			currentChamber--;
 			NextPlayer ();

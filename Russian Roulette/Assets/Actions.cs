@@ -3,7 +3,9 @@ using System.Collections;
 
 public class Actions : Player {
 
-
+	IEnumerator Delay (float wait) {
+		yield return new WaitForSeconds (wait);
+	}
 
 	void Update (){
 		//Pulls the Trigger
@@ -18,6 +20,7 @@ public class Actions : Player {
 
 		if (Input.GetKeyUp (KeyCode.S)) {
 			currentChamber = SpinBarrel();
+			StartCoroutine (Delay (2));
 			print ("The barrel is now on chamber " + currentChamber); 
 			CheckChamber();
 			PullTrigger ();

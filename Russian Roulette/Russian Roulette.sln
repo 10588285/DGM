@@ -1,7 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{91AF93C6-C2C4-EA82-8CE4-C6B29A7D4756}") = "Russian Roulette", "Assembly-CSharp.csproj", "{044E7690-43CE-6CAF-370F-3BB9804F02A5}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Russian Roulette.CSharp", "Russian Roulette.CSharp.csproj", "{EDE02229-5FDE-91B8-1D00-DD510D5370F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{044E7690-43CE-6CAF-370F-3BB9804F02A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{044E7690-43CE-6CAF-370F-3BB9804F02A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{044E7690-43CE-6CAF-370F-3BB9804F02A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{044E7690-43CE-6CAF-370F-3BB9804F02A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDE02229-5FDE-91B8-1D00-DD510D5370F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDE02229-5FDE-91B8-1D00-DD510D5370F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDE02229-5FDE-91B8-1D00-DD510D5370F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDE02229-5FDE-91B8-1D00-DD510D5370F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
