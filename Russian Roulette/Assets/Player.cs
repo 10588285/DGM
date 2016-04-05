@@ -16,11 +16,16 @@ public class Player : MonoBehaviour {
 	const int SPIN = 7;
 	protected bool bullet = false;
 
+	public AudioSource source;
+
+	public AudioClip click;
+	public AudioClip shot;
+	public AudioClip spin;
 
 	void Start (){
 		currentChamber = SpinBarrel ();
 		print ("The barrel is now on chamber " + currentChamber); 
-		NextPlayer ();
+		print (players [currentPlayer] + " Currently has the gun");
 	}
 
 	//Generate a number between 1 and 6
@@ -35,13 +40,15 @@ public class Player : MonoBehaviour {
 		switch (bullet) {
 			//yes, the bullet fires and kills the player currently holding the gun
 		case true:{
-			print ("The Gun has fired and killed " + players [currentPlayer--]);
+			print ("The Gun has fired and killed " + players [currentPlayer]);
 			break;
 			}
 			//no, nothing happens and the chamber goes down. 
-		case false:{
+		case false:
+			{
 			}
-			print (players [currentPlayer--] + " has pulled the trigger and nothing happened");
+			source.PlayOneShot (click,1);
+			print (players [currentPlayer] + " has pulled the trigger and nothing happened");
 			currentChamber--;
 			NextPlayer ();
 			break;
@@ -51,12 +58,13 @@ public class Player : MonoBehaviour {
 	//Gives the gun to the next player. 
 	public void NextPlayer()
 	{
-		if (currentPlayer < players.Length) {
-			currentPlayer ++;
+		if (currentPlayer >= players.Length - 1) {
+			currentPlayer = 0;
 		} else {
-			currentPlayer = 1;
+			currentPlayer++;
+
 		}
-		print ("The Gun has been passed to " + players [currentPlayer--]);
+		print ("The Gun has been passed to " + players [currentPlayer]);
 	}
 //Checks the chamber for the bullet
 	public void CheckChamber (){

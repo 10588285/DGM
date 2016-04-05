@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Actions : Player {
 
+
+
 	void Update (){
 		//Pulls the Trigger
 		if (Input.GetKeyUp (KeyCode.D)) {
